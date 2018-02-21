@@ -1,0 +1,19 @@
+.sort {
+  .sort-title{
+
+  }
+
+  .sort-items {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .btn {
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .btn.selected-property {
+    background-color: navy;
+  }
+}

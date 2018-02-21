@@ -1,0 +1,12 @@
+<div class="sort">
+  <div class="sort-title">Sort Events:</div>
+  <div class="sort-items">
+    <div *ngFor="let property of properties; let idx = index"
+      class="btn"
+      [ngClass]="{'selected-property': property === selectedProperty}"
+      (click)="onClick(idx)">
+      {{property}}
+      <span *ngIf="property === selectedProperty" innerHTML="{{isAsc ? arrDown : arrUp }}" ></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="">
+  <div class="event-list">
+      <div *ngIf="events">
+        <app-event-item *ngFor="let event of events"
+             tabindex="0"
+             class="event-item"
+             [event]="event"
+             [filter]="filter">
+        </app-event-item>
+      </div>
+
+      <div *ngIf="!events && filter" class="not-found">
+        <div class="icon-wondering"></div>
+        <div style="margin-top: 5px; font-size: 14px;">Try new search or <a (click)="clearFilter()">clear</a> the filter</div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="event-item">
+  <div *ngIf="!event.available_seats" class="sold-out">
+    <div class="icon-wondering"></div>
+    <div>Sold Out!</div>
+  </div>
+
+  <div class="event-header">
+    <div class="event-title" innerHTML="{{ event.name }}"></div>
+    <div class="event-price">
+      <span innerHTML="{{ event.price | currency:'USD':1}}"></span>
+    </div>
+  </div>
+  <div class="event-content">
+    <div class="event-venue">
+      <div class="event-property-title">Where</div>
+      <div class="event-property-value" innerHTML="{{ event.venue | highlightSearch:filter}}"></div>
+    </div>
+    <div class="event-date">
+        <div class="event-property-title">When</div>
+        <div class="event-property-value">{{ event.date | date }}</div>
+    </div>
+    <div class="event-seats">
+        <div class="event-property-title">Seats Available</div>
+        <div class="event-property-value">{{ event.available_seats }}</div>
+    </div>
+    <div class="event-tags">
+      <div class="event-tag" *ngFor="let tag of event.labels">
+        {{tag}}
+      </div>
+    </div>
+  </div>
+</div>

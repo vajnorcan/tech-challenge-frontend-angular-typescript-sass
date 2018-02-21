@@ -1,0 +1,18 @@
+<h3>Events</h3>
+<div class="events-component">
+  <div>
+    <search (queryStrChange)="onFilterChanged($event)"></search>
+  </div>
+  <div class="availability-filter-container">
+    <form id="availOnly">
+      <label for="chck_available">Display Available Events Only</label>
+      <input id="chck_available" type="checkbox" (change)="onCheckboxUpdate($event)" />
+    </form>
+  </div>
+  <div class="sort-container">
+    <app-sorter [properties]="['name', 'date', 'available_seats', 'price']" (propertyChange)="onSortPropertyChanged($event)"></app-sorter>
+  </div>
+  <div>
+    <app-event-list [events]="events" [filter]="queryString"></app-event-list>
+  </div>
+</div>

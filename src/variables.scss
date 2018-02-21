@@ -1,0 +1,41 @@
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 480px;
+$screen-xxs: 320px;
+
+$font-size: 18px;
+$font-size-sm: 14px;
+
+$soft-blue: #5298D8;
+$dark-blue: rgb(59, 55, 75);
+$dark-blue-transparent: rgba(59,55,75, 0.9);
+$dark-blue-transparent2: rgba(59,55,75, 0.8);
+$dark-blue-transparent3: rgba(59,55,75, 0.4);
+$pale-grey: #f2f6fa;
+$charcoal-grey: #3b374b;
+$charcoal-grey-transparent: rgba(59, 55, 75, 0.6);
+
+$input-color: #677583;
+$input-background-color: #F8FBFC;
+$input-font-size: 16px;
+
+
+@mixin media-breakpoint-down($val) {
+  @if $val {
+    @media (max-width: $val) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+@mixin media-breakpoint-up($val) {
+  @if $val {
+    @media (min-width: $val) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

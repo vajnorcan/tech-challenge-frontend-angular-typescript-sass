@@ -1,0 +1,4 @@
+<div class="searchbox" [ngClass]="{'has-data':queryStr}">
+  <input type="text" placeholder="Search by the venue name"  (input)="queryStr = $event.target.value" [value]="queryStr" />
+  <button class="clear-btn" (click)="clear();" title="Clear filter">&#10005;</button>
+</div>

@@ -1,0 +1,96 @@
+@import "../../../variables";
+
+.event-list {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  margin-bottom: 20px;
+
+  > div {
+    padding: 0px 5px 0px 5px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .event-item {
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    background-color: white;
+    color: $charcoal-grey;
+    margin: 3px 0px 5px 0px;
+    border-radius: 3px;
+    margin: 1px;
+    position: relative;
+
+    .event-content {
+      font-size: 12px;
+      padding: 5px;
+      position: relative;
+
+      > div {
+        display: flex;
+        padding: 2px 0px;
+
+        .event-property-title {
+          color: $input-color;
+          width: 100px;
+        }
+      }
+
+      .event-tag {
+        display: inline-block;
+        padding: 2px 3px;
+        border-radius: 3px;
+        background-color: rgba(211,211,211,0.6);
+        color: $input-color;
+        margin: 0px 3px;
+
+        &:first-child {
+          margin: 0px 3px 0px 0px;
+        }
+      }
+    }
+
+    .event-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 5px 5px 0px 5px;
+    }
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .not-found {
+    font-size: 24px;
+    color: $charcoal-grey-transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  .sold-out {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 128, 114, 0.8);
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    z-index: 1;
+    font-weight: bold;
+  }
+}
